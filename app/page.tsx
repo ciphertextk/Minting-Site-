@@ -1,8 +1,14 @@
+'use client'
+
 import Image from "next/image";
+import { Login } from '@/components/login';
 
 export default function Home() {
+
+  
+
   return (
-    <main className="flex flex-col justify-between h-screen bg-red-500">
+    <main className="flex flex-col justify-between h-screen bg-white-400">
 
       {/**navbar div */}
       <div className="h-10 bg-blue-100">
@@ -16,6 +22,10 @@ export default function Home() {
           The Minting Environment
         </p>
       </div>
+      <div className="mt-6 flex justify-center text-center">
+             <Login/>
+
+              </div>
 
       {/**footer div */}
       <div className="h-10 bg-blue-100">
