@@ -4,6 +4,7 @@ import { usePrivy } from '@privy-io/react-auth';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import Image from 'next/image';
+import { Button, Flex } from '@chakra-ui/react'
 
 export function Login() {
     const router = useRouter();
@@ -27,16 +28,17 @@ export function Login() {
     };
 
     return (
-        <button onClick={Login} className='w-48 rounded-full bg-blue-600 cursor-pointer z-20 hover:bg-green-400'>
-            <div className='flex w-full justify-between'>
-              <p>Join Mintify</p>
-              <Image
-                src='./LeftArrow.svg'
-                alt=''
-                width={20}
-                height={20}
-              />
-            </div>
-        </button>
+        <Flex 
+        
+        alignItems="center" 
+        justifyContent="center"
+    >
+        <Button 
+            colorScheme='blue' 
+            onClick={Login}
+        >
+            Join Mintify
+        </Button>
+    </Flex>
     );
 }

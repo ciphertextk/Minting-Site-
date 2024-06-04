@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { PrivyContext } from "@/providers/privyContext";
+import { ChakraProvider } from '@chakra-ui/react'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <ChakraProvider>
         <PrivyContext>
           {children}
         </PrivyContext>
+        </ChakraProvider>
       </body>
     </html>
   );

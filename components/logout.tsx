@@ -3,6 +3,7 @@
 import { usePrivy } from '@privy-io/react-auth';
 import { useRouter } from 'next/navigation';
 import React from 'react';
+import { Button, Flex } from '@chakra-ui/react';
 
 export function Logout() {
     const router = useRouter();
@@ -20,8 +21,17 @@ export function Logout() {
     };
 
     return (
-        <button onClick={handleLogout} className='w-32 py-2 rounded bg-blue-600 cursor-pointer hover:bg-blue-400 text-white'>
+        <Flex 
+        
+        alignItems="center" 
+        justifyContent="center"
+    >
+        <Button 
+            colorScheme='blue' 
+            onClick={handleLogout}
+        >
             Logout
-        </button>
+        </Button>
+    </Flex>
     );
 }
